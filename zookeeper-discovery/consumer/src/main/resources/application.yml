@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zookeeper-consumer
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+        root: /services
+server:
+  port: 29999

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zookeeper-provider
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+        root: /services
+server:
+  port: 28888
