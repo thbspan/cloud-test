@@ -4,6 +4,8 @@ spring:
   cloud:
     zookeeper:
       connect-string: localhost:2181
+      # session 超时时间，如果<minSessionTimeout，则使用minSessionTimeout；如果>maxSessionTimeout，则使用maxSessionTimeout。
+      session-timeout: 5s
       discovery:
         register: true
         root: /services
