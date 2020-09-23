@@ -7,3 +7,7 @@ spring:
         server-addr: localhost:8848
 server:
   port: 28080
+# 设置 Ribbon 客户端的自定义配置
+demo01-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 负载均衡规则全类名
