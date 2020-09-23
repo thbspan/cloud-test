@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: demo01-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+server:
+  port: ${random.int(10000,19999)}
