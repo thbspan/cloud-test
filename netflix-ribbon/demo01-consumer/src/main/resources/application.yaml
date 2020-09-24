@@ -7,3 +7,10 @@ spring:
         server-addr: localhost:8848
 server:
   port: 28080
+ribbon:
+  eager-load:
+    # 指定需要饥饿加载的客户端名称，服务名称
+    clients:
+      - ${spring.application.name}
+      - demo01-provider
+    enabled: true
