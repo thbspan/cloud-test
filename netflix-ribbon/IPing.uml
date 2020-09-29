@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.netflix.loadbalancer.IPing</OriginalElement>
+  <nodes>
+    <node x="477.0" y="79.0">com.netflix.loadbalancer.PingConstant</node>
+    <node x="306.75" y="0.0">com.netflix.loadbalancer.IPing</node>
+    <node x="52.5" y="158.0">com.netflix.loadbalancer.DummyPing</node>
+    <node x="236.0" y="79.0">com.netflix.loadbalancer.NoOpPing</node>
+    <node x="0.0" y="79.0">com.netflix.loadbalancer.AbstractLoadBalancerPing</node>
+    <node x="360.0" y="79.0">com.netflix.loadbalancer.PingUrl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.netflix.loadbalancer.AbstractLoadBalancerPing" target="com.netflix.loadbalancer.IPing">
+      <point x="0.0" y="-14.5" />
+      <point x="108.0" y="49.0" />
+      <point x="317.125" y="49.0" />
+      <point x="-31.125" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.DummyPing" target="com.netflix.loadbalancer.AbstractLoadBalancerPing">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.NoOpPing" target="com.netflix.loadbalancer.IPing">
+      <point x="0.0" y="-14.5" />
+      <point x="288.0" y="59.0" />
+      <point x="337.875" y="59.0" />
+      <point x="-10.375" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.PingConstant" target="com.netflix.loadbalancer.IPing">
+      <point x="0.0" y="-14.5" />
+      <point x="543.0" y="49.0" />
+      <point x="379.375" y="49.0" />
+      <point x="31.125" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.PingUrl" target="com.netflix.loadbalancer.IPing">
+      <point x="0.0" y="-14.5" />
+      <point x="408.5" y="59.0" />
+      <point x="358.625" y="59.0" />
+      <point x="10.375" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="41.5" y="14.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

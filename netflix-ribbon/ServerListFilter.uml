@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.netflix.loadbalancer.ServerListFilter</OriginalElement>
+  <nodes>
+    <node x="222.0" y="316.0">org.springframework.cloud.netflix.ribbon.ZonePreferenceServerListFilter</node>
+    <node x="185.75" y="0.0">com.netflix.loadbalancer.Server</node>
+    <node x="168.0" y="237.0">com.netflix.loadbalancer.ZoneAffinityServerListFilter</node>
+    <node x="122.74999999999999" y="158.0">com.netflix.loadbalancer.AbstractServerListFilter</node>
+    <node x="107.99999999999997" y="79.0">com.netflix.loadbalancer.ServerListFilter</node>
+    <node x="0.0" y="316.0">com.netflix.loadbalancer.ServerListSubsetFilter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.netflix.loadbalancer.ServerListSubsetFilter" target="com.netflix.loadbalancer.ZoneAffinityServerListFilter">
+      <point x="50.5" y="-14.5" />
+      <point x="151.5" y="291.0" />
+      <point x="229.0" y="291.0" />
+      <point x="-61.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.netflix.ribbon.ZonePreferenceServerListFilter" target="com.netflix.loadbalancer.ZoneAffinityServerListFilter">
+      <point x="0.0" y="-14.5" />
+      <point x="61.0" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ZoneAffinityServerListFilter" target="com.netflix.loadbalancer.AbstractServerListFilter">
+      <point x="-61.0" y="-14.5" />
+      <point x="229.0" y="212.0" />
+      <point x="230.75" y="212.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ServerListSubsetFilter" target="com.netflix.loadbalancer.Server">
+      <point x="-50.5" y="-14.5" />
+      <point x="50.5" y="49.0" />
+      <point x="197.0" y="49.0" />
+      <point x="-33.75" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ZoneAffinityServerListFilter" target="com.netflix.loadbalancer.Server">
+      <point x="61.000000000000014" y="-14.5" />
+      <point x="351.0" y="212.0" />
+      <point x="349.25" y="212.0" />
+      <point x="349.25" y="49.0" />
+      <point x="264.5" y="49.0" />
+      <point x="33.75" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ServerListFilter" target="com.netflix.loadbalancer.Server">
+      <point x="0.0" y="-14.5" />
+      <point x="187.99999999999997" y="59.0" />
+      <point x="219.5" y="59.0" />
+      <point x="-11.25" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.AbstractServerListFilter" target="com.netflix.loadbalancer.ServerListFilter">
+      <point x="-54.0" y="-14.5" />
+      <point x="176.75" y="133.0" />
+      <point x="187.99999999999997" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.AbstractServerListFilter" target="com.netflix.loadbalancer.Server">
+      <point x="54.0" y="-14.5" />
+      <point x="284.75" y="133.0" />
+      <point x="278.5" y="133.0" />
+      <point x="278.5" y="59.0" />
+      <point x="242.0" y="59.0" />
+      <point x="11.25" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="80.0" y="54.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

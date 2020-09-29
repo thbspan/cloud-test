@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.netflix.loadbalancer.ILoadBalancer</OriginalElement>
+  <nodes>
+    <node x="0.0" y="316.0">org.springframework.cloud.zookeeper.discovery.dependency.DependenciesBasedLoadBalancer</node>
+    <node x="243.0" y="79.0">com.netflix.loadbalancer.AbstractLoadBalancer</node>
+    <node x="121.5" y="237.0">com.netflix.loadbalancer.DynamicServerListLoadBalancer</node>
+    <node x="271.0" y="316.0">com.netflix.loadbalancer.ZoneAwareLoadBalancer</node>
+    <node x="347.0" y="158.0">com.netflix.loadbalancer.NoOpLoadBalancer</node>
+    <node x="267.5" y="0.0">com.netflix.loadbalancer.ILoadBalancer</node>
+    <node x="167.0" y="158.0">com.netflix.loadbalancer.BaseLoadBalancer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.netflix.loadbalancer.DynamicServerListLoadBalancer" target="com.netflix.loadbalancer.BaseLoadBalancer">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.NoOpLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer">
+      <point x="0.0" y="-14.5" />
+      <point x="427.0" y="133.0" />
+      <point x="384.0" y="133.0" />
+      <point x="47.0" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ZoneAwareLoadBalancer" target="com.netflix.loadbalancer.DynamicServerListLoadBalancer">
+      <point x="0.0" y="-14.5" />
+      <point x="368.5" y="291.0" />
+      <point x="309.75" y="291.0" />
+      <point x="62.75" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.BaseLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer">
+      <point x="0.0" y="-14.5" />
+      <point x="247.0" y="133.0" />
+      <point x="290.0" y="133.0" />
+      <point x="-47.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.zookeeper.discovery.dependency.DependenciesBasedLoadBalancer" target="com.netflix.loadbalancer.DynamicServerListLoadBalancer">
+      <point x="0.0" y="-14.5" />
+      <point x="125.5" y="291.0" />
+      <point x="184.25" y="291.0" />
+      <point x="-62.75" y="14.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.AbstractLoadBalancer" target="com.netflix.loadbalancer.ILoadBalancer">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="69.5" y="14.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
