@@ -31,6 +31,9 @@ public class HelloController {
         return "consumer:" + response;
     }
 
+    /**
+     * 重试配置对这个服务有效
+     */
     @GetMapping("/hello02")
     public String hello02(String name) {
         // 直接使用 RestTemplate 调用`serviceId`服务

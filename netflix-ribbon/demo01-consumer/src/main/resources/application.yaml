@@ -7,3 +7,32 @@ spring:
         server-addr: localhost:8848
 server:
   port: 28080
+ribbon:
+  restclient:
+    # 对应 RestClientRibbonConfiguration 配置
+    enabled: true
+  # 全局配置
+  # 请求连接超时时间，单位：毫秒。默认为 1000
+  ConnectTimeout: 1000
+  # 请求读取超时时间，单位：毫秒。默认为 1000，这里设置为1主要为了模拟请求超时
+  ReadTimeout: 1
+  # 是否对所有操作都进行重试，默认为 false
+  OkToRetryOnAllOperations: true
+  # 对当前服务的重试次数，默认为 0 次
+  MaxAutoRetries: 0
+  # 重新选择服务实例的次数，默认为 1 次。注意，不包含第 1 次调用
+  MaxAutoRetriesNextServer: 1
+
+# 对 demo01-provider 这个服务配置
+demo01-provider:
+  ribbon:
+    # 请求连接超时时间，单位：毫秒。默认为 1000
+    ConnectTimeout: 1000
+    # 请求读取超时时间，单位：毫秒。默认为 1000，这里设置为1主要为了模拟请求超时
+    ReadTimeout: 1
+    # 是否对所有操作都进行重试，默认为 false
+    OkToRetryOnAllOperations: true
+    # 对当前服务的重试次数，默认为 0 次
+    MaxAutoRetries: 0
+    # 重新选择服务实例的次数，默认为 1 次。注意，不包含第 1 次调用
+    MaxAutoRetriesNextServer: 1
