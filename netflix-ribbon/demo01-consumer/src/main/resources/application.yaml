@@ -7,3 +7,14 @@ spring:
         server-addr: localhost:8848
 server:
   port: 28080
+ribbon:
+#  okhttp:
+#    # 设置使用使用 OkHttp，对应 OkHttpRibbonConfiguration 配置类
+#    enabled: true
+#  restclient:
+#    # 设置使用 Jersey Client，对应 RestClientRibbonConfiguration 配置类
+#    enabled: true
+  http:
+    client:
+      # Apache HttpClient，对应 HttpClientRibbonConfiguration 配置类
+      enabled: true
