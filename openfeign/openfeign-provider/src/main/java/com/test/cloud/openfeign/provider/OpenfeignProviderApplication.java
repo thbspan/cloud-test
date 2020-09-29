@@ -1,12 +1,12 @@
-package com.test.cloud.netflix.ribbon.demo01.provider;
+package com.test.cloud.openfeign.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Demo01ProviderApplication {
+public class OpenfeignProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Demo01ProviderApplication.class, args);
+        SpringApplication.run(OpenfeignProviderApplication.class, args);
     }
 }

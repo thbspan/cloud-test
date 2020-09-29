@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NacosProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NacosProviderApplication.class);
+        SpringApplication.run(NacosProviderApplication.class, args);
     }
 }

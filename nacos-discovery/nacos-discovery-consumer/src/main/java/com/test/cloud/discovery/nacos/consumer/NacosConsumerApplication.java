@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class NacosConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NacosConsumerApplication.class);
+        SpringApplication.run(NacosConsumerApplication.class, args);
     }
 
     @Bean

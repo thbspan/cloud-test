@@ -12,6 +12,7 @@
         <module>zookeeper-discovery</module>
         <module>nacos-discovery</module>
         <module>netflix-ribbon</module>
+        <module>openfeign</module>
     </modules>
 
     <properties>

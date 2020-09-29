@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class Demo01ConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Demo01ConsumerApplication.class);
+        SpringApplication.run(Demo01ConsumerApplication.class, args);
     }
 
     @Bean

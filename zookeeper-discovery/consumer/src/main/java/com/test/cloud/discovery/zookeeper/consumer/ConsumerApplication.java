@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class ConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 
     @Bean
