@@ -7,3 +7,7 @@ spring:
         server-addr: localhost:8848
 server:
   port: 28080
+logging:
+  level:
+    # feign日志以debug方式输出的，所有这里需要设置日志级别
+    com.test.cloud.openfeign.consumer.service: DEBUG
