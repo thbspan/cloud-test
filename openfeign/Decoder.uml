@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>feign.codec.Decoder</OriginalElement>
+  <nodes>
+    <node x="159.0" y="89.0">org.springframework.cloud.openfeign.support.DefaultGzipDecoder</node>
+    <node x="526.0" y="89.0">feign.stream.StreamDecoder</node>
+    <node x="685.0" y="89.0">org.springframework.cloud.openfeign.support.SpringDecoder</node>
+    <node x="0.0" y="89.0">feign.codec.StringDecoder</node>
+    <node x="1066.0" y="89.0">org.springframework.cloud.openfeign.support.ResponseEntityDecoder</node>
+    <node x="353.0" y="89.0">feign.optionals.OptionalDecoder</node>
+    <node x="547.0" y="0.0">feign.codec.Decoder</node>
+    <node x="21.0" y="168.0">feign.codec.Decoder.Default</node>
+    <node x="844.0" y="89.0">feign.Feign.ResponseMappingDecoder</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="feign.stream.StreamDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.openfeign.support.SpringDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="754.5" y="69.0" />
+      <point x="609.3571428571429" y="69.0" />
+      <point x="13.85714285714289" y="14.5" />
+    </edge>
+    <edge source="feign.codec.Decoder.Default" target="feign.codec.StringDecoder">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="feign.Feign.ResponseMappingDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="945.0" y="59.0" />
+      <point x="623.2142857142857" y="59.0" />
+      <point x="27.714285714285666" y="14.5" />
+    </edge>
+    <edge source="feign.codec.StringDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="69.5" y="49.0" />
+      <point x="553.9285714285714" y="49.0" />
+      <point x="-41.571428571428555" y="14.5" />
+    </edge>
+    <edge source="feign.optionals.OptionalDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="429.5" y="69.0" />
+      <point x="581.6428571428571" y="69.0" />
+      <point x="-13.85714285714289" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.openfeign.support.DefaultGzipDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="246.0" y="59.0" />
+      <point x="567.7857142857143" y="59.0" />
+      <point x="-27.714285714285666" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.openfeign.support.ResponseEntityDecoder" target="feign.codec.Decoder">
+      <point x="0.0" y="-14.5" />
+      <point x="1163.5" y="49.0" />
+      <point x="637.0714285714286" y="49.0" />
+      <point x="41.571428571428555" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="654.5" y="14.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

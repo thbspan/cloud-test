@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>feign.RequestInterceptor</OriginalElement>
+  <nodes>
+    <node x="418.75" y="79.0">feign.auth.BasicAuthRequestInterceptor</node>
+    <node x="0.0" y="158.0">org.springframework.cloud.openfeign.encoding.FeignAcceptGzipEncodingInterceptor</node>
+    <node x="196.75000000000003" y="79.0">org.springframework.cloud.openfeign.encoding.BaseRequestInterceptor</node>
+    <node x="330.5" y="0.0">feign.RequestInterceptor</node>
+    <node x="306.0" y="158.0">org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingInterceptor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.cloud.openfeign.encoding.FeignAcceptGzipEncodingInterceptor" target="org.springframework.cloud.openfeign.encoding.BaseRequestInterceptor">
+      <point x="0.0" y="-14.5" />
+      <point x="143.0" y="133.0" />
+      <point x="247.25000000000003" y="133.0" />
+      <point x="-50.5" y="14.5" />
+    </edge>
+    <edge source="feign.auth.BasicAuthRequestInterceptor" target="feign.RequestInterceptor">
+      <point x="0.0" y="-14.5" />
+      <point x="537.25" y="54.0" />
+      <point x="461.0" y="54.0" />
+      <point x="43.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.openfeign.encoding.BaseRequestInterceptor" target="feign.RequestInterceptor">
+      <point x="0.0" y="-14.5" />
+      <point x="297.75" y="54.0" />
+      <point x="374.0" y="54.0" />
+      <point x="-43.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingInterceptor" target="org.springframework.cloud.openfeign.encoding.BaseRequestInterceptor">
+      <point x="0.0" y="-14.5" />
+      <point x="452.5" y="133.0" />
+      <point x="348.25" y="133.0" />
+      <point x="50.5" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="87.0" y="14.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
