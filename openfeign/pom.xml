@@ -14,6 +14,7 @@
     <modules>
         <module>openfeign-consumer</module>
         <module>openfeign-provider</module>
+        <module>openfeign-provider-api</module>
     </modules>
 
 </project>
