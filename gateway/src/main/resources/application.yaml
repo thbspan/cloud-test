@@ -24,5 +24,13 @@ spring:
             - Path=/blog
           filters:
             - StripPrefix=1
+      # 与注册中心集合 DiscoveryLocatorProperties
+      discovery:
+        locator:
+          enabled: true
+          url-expression: "'lb://'+serviceId"
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 server:
   port: 8888
