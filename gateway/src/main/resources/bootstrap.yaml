@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: geteway-demo
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: # 使用的nacos命名空间，默认为null
+        group: DEFAULT_GROUP # nacos 配置分组
+        name: ${spring.application.name} # Nacos 配置集的 dataId，默认为 spring.application.name
+        file-extension: yaml # nacos 配置集的配置格式，默认为 properties
