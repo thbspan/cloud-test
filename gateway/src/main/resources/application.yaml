@@ -24,11 +24,12 @@ spring:
             - Path=/blog
           filters:
             - StripPrefix=1
-      # 与注册中心集合 DiscoveryLocatorProperties
-      discovery:
-        locator:
-          enabled: true
-          url-expression: "'lb://'+serviceId"
+      default-filters: # 默认过滤器，如果只想给指定路由配置过滤器，可以在 spring.cloud.gateway.routes[x].filters 配置项中，进行自定义设置
+        - name: Auth # 过滤器名。XXXGatewayFilterFactory XXX前缀
+          args: # 过滤器的配置参数
+            # 设置 token-header-name 配置项为 access-token，表示从请求 Header access-token 获得认证 Token
+            # 不设置会使用默认值 token
+            token-header-name: access-token
     nacos:
       discovery:
         server-addr: localhost:8848
