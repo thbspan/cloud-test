@@ -6,22 +6,18 @@ spring:
     gateway:
       # 路由配置项，对应 RouteDefinition 数组
       routes:
-        - id: search # 路由的编号
-          uri: https://www.baidu.com # 路由的目标地址
-          predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
-            - Path=/s
-          filters: # 过滤器，对请求进行拦截，实现自定义的功能，对应 FilterDefinition 数组
-            - StripPrefix=1
-        - id: oschina
-          uri: https://www.oschina.net
-          predicates:
-            - Path=/oschina
-          filters:
-            - StripPrefix=1
-        - id: blog
+        - id: blog-one
           uri: https://blog.csdn.net
           predicates:
             - Path=/blog
+            - Weight=blog, 90
+          filters:
+            - StripPrefix=1
+        - id: blog-two
+          uri: https://www.cnblogs.com
+          predicates:
+            - Path=/blog
+            - Weight=blog, 10
           filters:
             - StripPrefix=1
       # 与注册中心集合 DiscoveryLocatorProperties
