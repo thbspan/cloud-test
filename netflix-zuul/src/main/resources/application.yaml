@@ -1,6 +1,10 @@
 spring:
   application:
     name: zuul-application
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 server:
   port: 8888
 zuul:
@@ -12,3 +16,6 @@ zuul:
     route_oschina:
       path: /oschina/**
       url: https://www.oschina.net
+    route_users:
+      path: /nacos/**
+      service-id: nacos-provider
