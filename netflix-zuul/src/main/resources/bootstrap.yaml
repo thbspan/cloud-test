@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zuul-application
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: # 使用的 Nacos 的命名空间，默认为 null
+        group: DEFAULT_GROUP
+        name: ${spring.application.name}
+        file-extension: yaml # 配置集文件格式
