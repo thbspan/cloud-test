@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: zuul-application
+server:
+  port: 8888
+zuul:
+  servlet-path: /
+  routes: # 路由配置
+    route_blog:
+      path: /blog/**
+      url: https://blog.csdn.net
+    route_oschina:
+      path: /oschina/**
+      url: https://www.oschina.net

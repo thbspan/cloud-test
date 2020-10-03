@@ -14,6 +14,7 @@
         <module>netflix-ribbon</module>
         <module>openfeign</module>
         <module>gateway</module>
+        <module>netflix-zuul</module>
     </modules>
 
     <properties>
