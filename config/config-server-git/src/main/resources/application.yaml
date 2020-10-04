@@ -12,3 +12,7 @@ spring:
           uri: https://gitee.com/thbspan/cloud-test.git
           search-paths: /config-repo
           default-label: master # 使用的默认分支
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        service: ${spring.application.name}

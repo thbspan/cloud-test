@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-application
+  cloud:
+    config:
+      name: ${spring.application.name}
+      discovery:
+        enabled: true
+        service-id: demo-config-server # 注册中心 配置服务的名称
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        service: ${spring.application.name} # 注册到nacos中的服务名

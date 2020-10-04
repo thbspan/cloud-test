@@ -8,3 +8,6 @@ spring:
         service: ${spring.application.name}
 server:
   port: ${random.int[20000,60000]}
+logging:
+  level:
+    root: debug
