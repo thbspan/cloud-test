@@ -16,6 +16,7 @@
         <module>gateway</module>
         <module>netflix-zuul</module>
         <module>config</module>
+        <module>netflix-eureka</module>
     </modules>
 
     <properties>
