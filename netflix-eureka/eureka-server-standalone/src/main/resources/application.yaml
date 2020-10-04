@@ -1,6 +1,10 @@
 spring:
   application:
     name: eureka-server-standalone
+  security:
+    user:
+      name: eureka
+      password: eureka
 server:
   port: 8761 # eureka-server 端口
 eureka:
