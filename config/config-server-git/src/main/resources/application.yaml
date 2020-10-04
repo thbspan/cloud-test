@@ -12,3 +12,5 @@ spring:
           uri: https://gitee.com/thbspan/cloud-test.git
           search-paths: /config-repo
           default-label: master # 使用的默认分支
+rocketmq:
+  name-server: localhost:9876
