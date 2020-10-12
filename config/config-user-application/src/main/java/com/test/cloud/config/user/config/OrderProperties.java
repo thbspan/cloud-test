@@ -1,10 +1,12 @@
 package com.test.cloud.config.user.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "order")
+@RefreshScope
 public class OrderProperties {
     private Integer payTimeoutSeconds;
     private Integer createFrequencySeconds;
