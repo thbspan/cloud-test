@@ -21,11 +21,11 @@ public class DemoController {
 
     @GetMapping("/test01")
     public Object test01() {
-        Map<String, Object> result = new HashMap<>(4);
-        result.put("createFrequencySeconds", orderProperties.getCreateFrequencySeconds());
-        result.put("payTimeoutSeconds", orderProperties.getPayTimeoutSeconds());
-        return result;
-        // return orderProperties; //为了支持 @RefreshScope 注解，不能直接返回对象
+//        Map<String, Object> result = new HashMap<>(4);
+//        result.put("createFrequencySeconds", orderProperties.getCreateFrequencySeconds());
+//        result.put("payTimeoutSeconds", orderProperties.getPayTimeoutSeconds());
+//        return result;
+         return orderProperties;
     }
 
     @Value(value = "${order.pay-timeout-seconds}")
