@@ -22,6 +22,7 @@ public class DemoController {
 
     @Autowired
     private PrototypeScopeProperties prototypeScopeProperties;
+
     @GetMapping("/test01")
     public Object test01() {
 //        Map<String, Object> result = new HashMap<>(4);
@@ -29,7 +30,7 @@ public class DemoController {
 //        result.put("payTimeoutSeconds", orderProperties.getPayTimeoutSeconds());
 //        return result;
         System.out.println(prototypeScopeProperties);
-         return orderProperties;
+        return orderProperties;
     }
 
     @Value(value = "${order.pay-timeout-seconds}")

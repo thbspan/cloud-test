@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * Prototype scope bean，like @RefreshScope bean,可以更好的理解@RefreshScope实现原理
+ * <br/>
+ * singleton scope bean 也可以，注意 proxyMode = ScopedProxyMode.TARGET_CLASS
  */
 @Scope(scopeName= ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Component
