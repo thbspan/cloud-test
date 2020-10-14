@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.cloud.config.user.config.OrderProperties;
+import com.test.cloud.config.user.config.PrototypeScopeProperties;
 
 @RestController
 @RequestMapping("/demo")
@@ -19,12 +20,15 @@ public class DemoController {
     @Autowired
     private OrderProperties orderProperties;
 
+    @Autowired
+    private PrototypeScopeProperties prototypeScopeProperties;
     @GetMapping("/test01")
     public Object test01() {
 //        Map<String, Object> result = new HashMap<>(4);
 //        result.put("createFrequencySeconds", orderProperties.getCreateFrequencySeconds());
 //        result.put("payTimeoutSeconds", orderProperties.getPayTimeoutSeconds());
 //        return result;
+        System.out.println(prototypeScopeProperties);
          return orderProperties;
     }
 
