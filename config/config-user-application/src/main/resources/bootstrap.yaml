@@ -2,6 +2,10 @@ spring:
   application:
     name: user-application
   cloud:
-    config:
-      uri: http://localhost:8888 # spring cloud config server 地址
-      name: ${spring.application.name}
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: # 使用的Nacos的命名空间，默认为null，表示使用public这个命名空间
+        group: DEFAULT_GROUP
+        name: # 使用的 Nacos 配置集的 dataId，未设置时使用默认值 spring.application.name
+        file-extension: yaml # 文件格式
