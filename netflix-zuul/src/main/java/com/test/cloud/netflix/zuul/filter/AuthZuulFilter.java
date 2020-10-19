@@ -66,8 +66,8 @@ public class AuthZuulFilter extends ZuulFilter {
             ctx.setResponseStatusCode(401); // 响应 401 状态码
             return null;
         }
-        // 认证通过，添加userId 到 response Header中
-        ctx.getZuulResponseHeaders().add(new com.netflix.util.Pair<>(DEFAULT_HEADER_NAME, String.valueOf(userId)));
+        // 认证通过，添加userId 到 request Header中，方便后续请求从请求头部获取数据
+        ctx.getZuulRequestHeaders().put(DEFAULT_HEADER_NAME, String.valueOf(userId));
         return null;
     }
 }
