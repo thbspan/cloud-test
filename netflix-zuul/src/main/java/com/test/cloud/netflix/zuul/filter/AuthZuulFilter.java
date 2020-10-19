@@ -67,7 +67,7 @@ public class AuthZuulFilter extends ZuulFilter {
             return null;
         }
         // 认证通过，添加userId 到 response Header中
-        ctx.getZuulRequestHeaders().put(DEFAULT_HEADER_NAME, String.valueOf(userId));
+        ctx.getZuulResponseHeaders().add(new com.netflix.util.Pair<>(DEFAULT_HEADER_NAME, String.valueOf(userId)));
         return null;
     }
 }
