@@ -12,3 +12,6 @@ zuul:
     route_oschina:
       path: /oschina/**
       url: https://www.oschina.net
+#  SendResponseFilter:
+#    post:
+#      disable: true
