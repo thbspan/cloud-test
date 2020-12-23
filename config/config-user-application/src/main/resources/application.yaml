@@ -2,4 +2,6 @@ management:
   endpoints:
     web:
       exposure:
+        # actuator需要开放的端点，这样请求url /actuator/refresh 就可以获取到最新的配置
+        # 默认只打开 health 和 info 两个端点
         include: refresh
