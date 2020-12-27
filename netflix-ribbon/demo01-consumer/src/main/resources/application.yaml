@@ -13,4 +13,4 @@ ribbon:
     clients:
       - ${spring.application.name}
       - demo01-provider
-    enabled: true
+    enabled: true # 是否开启饥饿加载。默认为 false
