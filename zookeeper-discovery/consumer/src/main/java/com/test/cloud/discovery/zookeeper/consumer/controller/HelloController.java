@@ -3,6 +3,7 @@ package com.test.cloud.discovery.zookeeper.consumer.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,10 @@ public class HelloController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @LoadBalanced
+    @Autowired
+    private RestTemplate loadBalancedRestTemplate;
+
     @GetMapping("/hello")
     public String hello(String name) {
         ServiceInstance instance = loadBalancerClient.choose("zookeeper-provider");
@@ -32,5 +37,10 @@ public class HelloController {
         String response = restTemplate.getForObject(targetUrl, String.class);
         // 返回结果
         return "consumer:" + response;
+    }
+
+    @GetMapping("/hi")
+    public String hi(String name) {
+        return "hi " + loadBalancedRestTemplate.getForEntity("http://zookeeper-provider/echo?name=" + name, String.class);
     }
 }

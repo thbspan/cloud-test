@@ -5,9 +5,14 @@ spring:
     zookeeper:
       connect-string: localhost:2181
       # session 超时时间，如果<minSessionTimeout，则使用minSessionTimeout；如果>maxSessionTimeout，则使用maxSessionTimeout。
-      session-timeout: 5s
+      session-timeout: 15m
+      connection-timeout: 10s
       discovery:
         register: true
         root: /services
+      dependency:
+        ribbon:
+          loadbalancer:
+            defaulthealthendpoint: /health
 server:
-  port: 28888
+  port: ${random.int(30000,40000)}
