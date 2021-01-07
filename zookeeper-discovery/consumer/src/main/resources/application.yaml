@@ -12,6 +12,9 @@ spring:
         root: /services
       dependency:
         enabled: true
+        ribbon:
+          loadbalancer:
+            defaulthealthendpoint: /test
 zookeeper-provider:
   ribbon:
     NFLoadBalancerPingInterval: 2
