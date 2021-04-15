@@ -10,9 +10,5 @@ spring:
       discovery:
         register: true
         root: /services
-      dependency:
-        ribbon:
-          loadbalancer:
-            defaulthealthendpoint: /health
 server:
   port: ${random.int(30000,40000)}
