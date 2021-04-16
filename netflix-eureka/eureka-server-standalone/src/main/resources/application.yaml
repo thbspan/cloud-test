@@ -8,6 +8,7 @@ eureka:
     # 集群部署时，如果不配置这个属性值，那么${spring.application.name}的值必须相同
     # 如果配置了这个值，那么集群中这个属性要相同
     appname: ${spring.application.name}
+    prefer-ip-address: true
     # 可以自定义hostname
     # hostname: xxxx
   client:
