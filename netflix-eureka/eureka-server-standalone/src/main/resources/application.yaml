@@ -4,6 +4,8 @@ spring:
 server:
   port: 8761 # eureka-server 端口
 eureka:
+  server:
+    eviction-interval-timer-in-ms: 60
   instance:
     # 集群部署时，如果不配置这个属性值，那么${spring.application.name}的值必须相同
     # 如果配置了这个值，那么集群中这个属性要相同
@@ -11,6 +13,7 @@ eureka:
     prefer-ip-address: true
     # 可以自定义hostname
     # hostname: xxxx
+    lease-expiration-duration-in-seconds: 90
   client:
     # 集群部署时 register-with-eureka fetch-registry 改为true
     register-with-eureka: false # 不注册到eureka-server
