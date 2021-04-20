@@ -4,12 +4,16 @@ spring:
 server:
   port: 0 # 解决随机端口问题
 management:
-  context-path: /manage
+  endpoints:
+    web:
+      base-path: /mgnt
+      exposure:
+        include: health,info
 eureka:
   instance: # 解决随机端口问题
     instance-id: ${spring.application.name}:${random.int}
-    statusPageUrlPath: ${management.context-path}/info
-    healthCheckUrlPath: ${management.context-path}/health
+    statusPageUrlPath: ${management.endpoints.web.base-path}/info
+    healthCheckUrlPath: ${management.endpoints.web.base-path}/health
   client:
     register-with-eureka: true # 注册到 eureka-server
     fetch-registry: true # 从eureka-server获取注册表
