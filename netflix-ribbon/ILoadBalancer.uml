@@ -3,50 +3,41 @@
   <ID>JAVA</ID>
   <OriginalElement>com.netflix.loadbalancer.ILoadBalancer</OriginalElement>
   <nodes>
-    <node x="0.0" y="316.0">org.springframework.cloud.zookeeper.discovery.dependency.DependenciesBasedLoadBalancer</node>
-    <node x="243.0" y="79.0">com.netflix.loadbalancer.AbstractLoadBalancer</node>
-    <node x="121.5" y="237.0">com.netflix.loadbalancer.DynamicServerListLoadBalancer</node>
-    <node x="271.0" y="316.0">com.netflix.loadbalancer.ZoneAwareLoadBalancer</node>
-    <node x="347.0" y="158.0">com.netflix.loadbalancer.NoOpLoadBalancer</node>
-    <node x="267.5" y="0.0">com.netflix.loadbalancer.ILoadBalancer</node>
-    <node x="167.0" y="158.0">com.netflix.loadbalancer.BaseLoadBalancer</node>
+    <node x="154.25" y="80.0">com.netflix.loadbalancer.AbstractLoadBalancer</node>
+    <node x="0.0" y="240.0">com.netflix.loadbalancer.DynamicServerListLoadBalancer</node>
+    <node x="25.5" y="320.0">com.netflix.loadbalancer.ZoneAwareLoadBalancer</node>
+    <node x="266.0" y="160.0">com.netflix.loadbalancer.NoOpLoadBalancer</node>
+    <node x="183.25" y="0.0">com.netflix.loadbalancer.ILoadBalancer</node>
+    <node x="66.0" y="160.0">com.netflix.loadbalancer.BaseLoadBalancer</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.netflix.loadbalancer.DynamicServerListLoadBalancer" target="com.netflix.loadbalancer.BaseLoadBalancer">
-      <point x="0.0" y="-14.5" />
-      <point x="0.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.BaseLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="156.0" y="135.0" />
+      <point x="258.75" y="135.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="com.netflix.loadbalancer.NoOpLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer">
-      <point x="0.0" y="-14.5" />
-      <point x="427.0" y="133.0" />
-      <point x="384.0" y="133.0" />
-      <point x="47.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.ZoneAwareLoadBalancer" target="com.netflix.loadbalancer.DynamicServerListLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="com.netflix.loadbalancer.ZoneAwareLoadBalancer" target="com.netflix.loadbalancer.DynamicServerListLoadBalancer">
-      <point x="0.0" y="-14.5" />
-      <point x="368.5" y="291.0" />
-      <point x="309.75" y="291.0" />
-      <point x="62.75" y="14.5" />
+    <edge source="com.netflix.loadbalancer.AbstractLoadBalancer" target="com.netflix.loadbalancer.ILoadBalancer" relationship="REALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="com.netflix.loadbalancer.BaseLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer">
-      <point x="0.0" y="-14.5" />
-      <point x="247.0" y="133.0" />
-      <point x="290.0" y="133.0" />
-      <point x="-47.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.NoOpLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="361.5" y="135.0" />
+      <point x="258.75" y="135.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="org.springframework.cloud.zookeeper.discovery.dependency.DependenciesBasedLoadBalancer" target="com.netflix.loadbalancer.DynamicServerListLoadBalancer">
-      <point x="0.0" y="-14.5" />
-      <point x="125.5" y="291.0" />
-      <point x="184.25" y="291.0" />
-      <point x="-62.75" y="14.5" />
-    </edge>
-    <edge source="com.netflix.loadbalancer.AbstractLoadBalancer" target="com.netflix.loadbalancer.ILoadBalancer">
-      <point x="0.0" y="-14.5" />
-      <point x="0.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.DynamicServerListLoadBalancer" target="com.netflix.loadbalancer.BaseLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="69.5" y="14.5" />
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="228.5" y="175.0" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>

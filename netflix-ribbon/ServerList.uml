@@ -3,68 +3,48 @@
   <ID>JAVA</ID>
   <OriginalElement>com.netflix.loadbalancer.ServerList</OriginalElement>
   <nodes>
-    <node x="0.0" y="237.0">com.netflix.loadbalancer.ConfigurationBasedServerList</node>
-    <node x="390.74999999999994" y="0.0">com.netflix.loadbalancer.Server</node>
-    <node x="253.49999999999994" y="158.0">com.netflix.loadbalancer.AbstractServerList</node>
-    <node x="371.88888888888886" y="79.0">com.netflix.loadbalancer.ServerList</node>
-    <node x="263.99999999999994" y="237.0">com.alibaba.cloud.nacos.ribbon.NacosServerList</node>
-    <node x="436.99999999999994" y="237.0">org.springframework.cloud.zookeeper.discovery.ZookeeperServerList</node>
-    <node x="447.49999999999994" y="158.0">org.springframework.cloud.netflix.ribbon.StaticServerList</node>
+    <node x="187.0" y="242.0">com.netflix.loadbalancer.ConfigurationBasedServerList</node>
+    <node x="153.0" y="0.0">com.netflix.loadbalancer.Server</node>
+    <node x="94.0" y="162.0">com.netflix.loadbalancer.AbstractServerList</node>
+    <node x="81.5" y="80.0">com.netflix.loadbalancer.ServerList</node>
+    <node x="0.0" y="242.0">com.alibaba.cloud.nacos.ribbon.NacosServerList</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="org.springframework.cloud.zookeeper.discovery.ZookeeperServerList" target="com.netflix.loadbalancer.AbstractServerList">
-      <point x="0.0" y="-14.5" />
-      <point x="527.5" y="212.0" />
-      <point x="398.49999999999994" y="212.0" />
-      <point x="58.0" y="14.5" />
+    <edge source="com.alibaba.cloud.nacos.ribbon.NacosServerList" target="com.netflix.loadbalancer.AbstractServerList" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="83.5" y="217.0" />
+      <point x="201.5" y="217.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="com.netflix.loadbalancer.ServerList" target="com.netflix.loadbalancer.Server">
-      <point x="0.0" y="-14.5" />
-      <point x="430.88888888888886" y="54.0" />
-      <point x="435.74999999999994" y="54.0" />
-      <point x="0.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.ServerList" target="com.netflix.loadbalancer.Server" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="158.0" y="55.0" />
+      <point x="201.5" y="55.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="com.netflix.loadbalancer.ConfigurationBasedServerList" target="com.netflix.loadbalancer.AbstractServerList">
-      <point x="0.0" y="-14.5" />
-      <point x="122.0" y="212.0" />
-      <point x="282.49999999999994" y="212.0" />
-      <point x="-58.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.ConfigurationBasedServerList" target="com.netflix.loadbalancer.AbstractServerList" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="319.5" y="217.0" />
+      <point x="201.5" y="217.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="org.springframework.cloud.netflix.ribbon.StaticServerList" target="com.netflix.loadbalancer.Server">
-      <point x="39.999999999999986" y="-14.5" />
-      <point x="567.5" y="133.0" />
-      <point x="547.5" y="133.0" />
-      <point x="547.5" y="54.0" />
-      <point x="465.74999999999994" y="54.0" />
-      <point x="30.0" y="14.5" />
+    <edge source="com.netflix.loadbalancer.AbstractServerList" target="com.netflix.loadbalancer.ServerList" relationship="REALIZATION">
+      <point x="-53.75" y="-15.0" />
+      <point x="147.75" y="136.0" />
+      <point x="158.0" y="136.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="org.springframework.cloud.netflix.ribbon.StaticServerList" target="com.netflix.loadbalancer.ServerList">
-      <point x="-40.0" y="-14.5" />
-      <point x="487.49999999999994" y="133.0" />
-      <point x="460.38888888888886" y="133.0" />
-      <point x="29.5" y="14.5" />
-    </edge>
-    <edge source="com.alibaba.cloud.nacos.ribbon.NacosServerList" target="com.netflix.loadbalancer.AbstractServerList">
-      <point x="0.0" y="-14.5" />
-      <point x="0.0" y="14.5" />
-    </edge>
-    <edge source="com.netflix.loadbalancer.AbstractServerList" target="com.netflix.loadbalancer.Server">
-      <point x="-43.5" y="-14.5" />
-      <point x="296.99999999999994" y="133.0" />
-      <point x="320.49999999999994" y="133.0" />
-      <point x="320.49999999999994" y="54.0" />
-      <point x="405.74999999999994" y="54.0" />
-      <point x="-30.0" y="14.5" />
-    </edge>
-    <edge source="com.netflix.loadbalancer.AbstractServerList" target="com.netflix.loadbalancer.ServerList">
-      <point x="43.5" y="-14.5" />
-      <point x="383.99999999999994" y="133.0" />
-      <point x="401.38888888888886" y="133.0" />
-      <point x="-29.5" y="14.5" />
+    <edge source="com.netflix.loadbalancer.AbstractServerList" target="com.netflix.loadbalancer.Server" relationship="DEPENDENCY">
+      <point x="53.75" y="-15.0" />
+      <point x="255.25" y="136.0" />
+      <point x="245.0" y="136.0" />
+      <point x="245.0" y="55.0" />
+      <point x="201.5" y="55.0" />
+      <point x="0.0" y="15.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="54.0" />
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="76.5" y="55.0" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
