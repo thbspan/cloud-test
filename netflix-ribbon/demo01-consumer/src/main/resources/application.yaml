@@ -7,3 +7,6 @@ spring:
         server-addr: localhost:8848
 server:
   port: 28080
+demo01-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
