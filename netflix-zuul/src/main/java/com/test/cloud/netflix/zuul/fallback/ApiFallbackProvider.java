@@ -10,9 +10,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class ApiFallbackProvider implements FallbackProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiFallbackProvider.class);
     @Override

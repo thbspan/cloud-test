@@ -5,6 +5,15 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:7070
+      zuul:
+        order:
+          pre: 10000 # 前置过滤器 SentinelZuulPreFilter 的顺序
+          post: 1000 # 后置过滤器 SentinelZuulPostFilter 的顺序
+          error: -1 # 错误过滤器 SentinelZuulErrorFilter 的顺序
 server:
   port: 8888
 zuul:
