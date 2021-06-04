@@ -9,6 +9,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 public class ZuulApplication {
 
     public static void main(String[] args) {
+        // SpringCloud 2020.x.x 支持 bootstrap
+        System.setProperty("spring.cloud.bootstrap.enabled", "true");
         SpringApplication.run(ZuulApplication.class, args);
     }
 }
