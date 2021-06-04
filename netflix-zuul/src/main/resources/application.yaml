@@ -28,3 +28,6 @@ zuul:
     route_users:
       path: /nacos/**
       service-id: nacos-provider
+    route_demo01:
+      path: /demo01/**
+      service-id: demo01-provider
