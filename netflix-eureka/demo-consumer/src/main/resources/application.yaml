@@ -4,6 +4,9 @@ spring:
 server:
   port: 48080
 eureka:
+  instance:
+    # default ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     register-with-eureka: true
     fetch-registry: true

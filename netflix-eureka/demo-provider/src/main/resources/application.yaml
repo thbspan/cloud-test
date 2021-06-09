@@ -11,7 +11,8 @@ management:
       base-path: /mgmt
 eureka:
   instance: # 解决随机端口问题
-    instance-id: ${spring.application.name}:${random.int}
+    # default ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${random.int}
     statusPageUrlPath: ${management.endpoints.web.base-path}/info
     healthCheckUrlPath: ${management.endpoints.web.base-path}/health
   client:
