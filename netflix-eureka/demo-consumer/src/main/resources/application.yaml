@@ -7,6 +7,7 @@ eureka:
   instance:
     # default ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
