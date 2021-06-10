@@ -10,4 +10,9 @@ spring:
         root: /config/dev
         enabled: true
         watcher:
-          enabled: true # 默认值是true, 监控配置变更后是否自动更新，需配合Spring Boot Actuators 使用
+          # 是否开启 Watch 功能，监听 Zookeeper 数据的变化。默认为 true，实现实时监听配置的更新
+          enabled: true
+        # 默认读取 Zookeeper 配置的目录，默认为 application
+        default-context: application
+server:
+  port: 8888
