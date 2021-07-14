@@ -11,3 +11,5 @@ server:
 demo01-provider:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 负载均衡规则全类名
+    # 设置ping的周期
+    NFLoadBalancerPingInterval: 5
