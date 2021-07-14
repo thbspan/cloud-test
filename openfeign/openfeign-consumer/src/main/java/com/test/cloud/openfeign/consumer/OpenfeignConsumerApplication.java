@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients
+import com.test.cloud.openfeign.consumer.config.DefaultFeignClientConfiguration;
+
+@EnableFeignClients(defaultConfiguration = DefaultFeignClientConfiguration.class)
 @SpringBootApplication
 public class OpenfeignConsumerApplication {
 
