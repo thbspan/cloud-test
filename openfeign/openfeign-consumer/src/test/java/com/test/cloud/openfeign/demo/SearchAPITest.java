@@ -8,7 +8,7 @@ public class SearchAPITest {
 
     @Test
     public void test() {
-        SearchAPI searchAPI = Feign.builder().target(SearchAPI.class, "https://www.baidu.com");
+        SearchAPI searchAPI = Feign.builder().target(SearchAPI.class, "http://www.baidu.com");
         System.out.println(searchAPI.search("java"));
     }
 }
