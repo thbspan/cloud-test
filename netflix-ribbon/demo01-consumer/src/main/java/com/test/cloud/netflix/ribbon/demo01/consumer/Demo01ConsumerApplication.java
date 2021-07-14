@@ -23,6 +23,10 @@ public class Demo01ConsumerApplication {
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
+        // 也可以通过 RestTemplateCustomizer Bean来实现对 RestTemplate 对象属性的修改和自定义
+        // 参考 LoadBalancerAutoConfiguration.loadBalancedRestTemplateInitializerDeprecated：
+        //     LoadBalancerAutoConfiguration.LoadBalancerInterceptorConfig.restTemplateCustomizer 添加拦截器 interceptors
+        //     RibbonAutoConfiguration.RibbonClientHttpRequestFactoryConfiguration.restTemplateCustomizer 自定义 ClientHttpRequestFactory
         return new RestTemplate(new HttpComponentsClientHttpRequestFactory(HttpClients.createDefault()));
     }
 
