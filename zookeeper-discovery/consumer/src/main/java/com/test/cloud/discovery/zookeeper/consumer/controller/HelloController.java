@@ -41,6 +41,6 @@ public class HelloController {
 
     @GetMapping("/hi")
     public String hi(String name) {
-        return "hi " + loadBalancedRestTemplate.getForEntity("http://zookeeper-provider/echo?name=" + name, String.class);
+        return "hi " + loadBalancedRestTemplate.getForObject("http://zookeeper-provider/echo?name=" + name, String.class);
     }
 }
