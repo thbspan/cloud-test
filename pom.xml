@@ -17,6 +17,7 @@
         <module>netflix-zuul</module>
         <module>config</module>
         <module>netflix-eureka</module>
+        <module>custom-loadbalancer</module>
     </modules>
 
     <properties>
