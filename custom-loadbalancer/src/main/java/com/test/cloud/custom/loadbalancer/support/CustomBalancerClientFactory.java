@@ -21,7 +21,8 @@ public class CustomBalancerClientFactory extends NamedContextFactory<CustomBalan
         super(CustomBalancerClientConfiguration.class, NAMESPACE, PROPERTY_NAME);
     }
 
-    public ILoadBalancer getILoadBalancer(String name) {
+    @SuppressWarnings("unchecked")
+    public <T> ILoadBalancer<T> getILoadBalancer(String name) {
         return getInstance(name, ILoadBalancer.class);
     }
 }
