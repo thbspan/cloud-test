@@ -7,7 +7,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: "*"
       base-path: /mgmt
 eureka:
   instance: # 解决随机端口问题

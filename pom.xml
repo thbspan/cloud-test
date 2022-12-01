@@ -18,6 +18,7 @@
         <module>config</module>
         <module>netflix-eureka</module>
         <module>custom-loadbalancer</module>
+        <module>actuator</module>
     </modules>
 
     <properties>
