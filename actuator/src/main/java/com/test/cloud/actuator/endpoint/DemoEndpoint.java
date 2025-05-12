@@ -32,4 +32,9 @@ public class DemoEndpoint {
         return num;
     }
 
+    // sum from 1 to 100
+    @ReadOperation
+    public int sum() {
+        return (1 + 100) * 100 / 2;
+    }
 }
